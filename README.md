@@ -37,18 +37,21 @@ python tools/deployment/export_onnx.py --check -c configs/deimv2/deimv2_dinov3_m
 
 
 6. python onnx evacuation
-We can demo in python onnx version:python tools/inference/onnx_inf.py --onnx deimv2_dinov3_m_coco.onnx --input image.jpg
+We can demo in python onnx version:
+```C++
+python tools/inference/onnx_inf.py --onnx deimv2_dinov3_m_coco.onnx --input image.jpg
+```
 <img width="2508" height="1484" alt="image" src="https://github.com/user-attachments/assets/0b320a93-621b-4cd5-89df-d7857ec5fa8d" />
 
 
-7. CPP onnx evacuation
+8. CPP onnx evacuation
 Use the reference coding above, we use VS2019 and onnx-1.181.
 The CPU version running at the intel Ultra9-185H
 ![onnx_result](https://github.com/user-attachments/assets/732cdb08-f972-42ee-8917-8503af173278)
 <img width="3120" height="1996" alt="image" src="https://github.com/user-attachments/assets/a0e0f265-92bb-4dde-a2e7-38cb21edaf01" />
 
 
-8. CPP GPU-accererate onnx evacuation
+9. CPP GPU-accererate onnx evacuation
 Enable the two lines for ONNX cuda running.
 
 <img width="3120" height="1996" alt="image" src="https://github.com/user-attachments/assets/55356a1b-ffc3-44e5-88da-b51492ff69c4" />
