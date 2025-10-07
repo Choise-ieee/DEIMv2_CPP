@@ -54,6 +54,11 @@ Enable the two lines for ONNX cuda running.
 The GPU version running at GTX1060 and intel-I9-13900KF.
 <img width="3100" height="1642" alt="image" src="https://github.com/user-attachments/assets/4115102d-f655-4c6d-a3ea-390ed27302df" />
 
+## PS.
+1. Due to the file size limited in Github, the onnx can download in this google share:https://drive.google.com/file/d/1nPKDHrotusQ748O1cQXJfi5wdShq6bKp/view?usp=drive_link
+2. Step 4 cost much system memory, you can config more virtual memory in windows system to cover it
+<img width="1347" height="1137" alt="image" src="https://github.com/user-attachments/assets/a4ca09b1-1109-4658-9cc0-e45ea4e4c8be" />
+ 
 
 ## Thanks
 Our work is built upon DEIMv2 and DINOv3. Thanks for their great work!
