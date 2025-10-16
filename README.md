@@ -6,6 +6,9 @@ DEIMv2(https://github.com/Intellindust-AI-Lab/DEIMv2) is an evolution of the DEI
 We completed it from originally python onnx to windows onnx.
 <img width="689" height="490" alt="image" src="https://github.com/user-attachments/assets/ef663580-682f-4fbc-b8fb-aae49a092c4e" />
 
+## Roadmap
+Complete the adaptation on the Huawei-Ascend 310B and 910C platform(progress descripted at the final chapter 'to do next part')
+
 
 ## Steps
 1. according to the guide of Setup of DEIMv2:
@@ -63,7 +66,35 @@ The GPU version running at GTX1060 and intel-I9-13900KF.
 1. Due to the file size limited in Github, the onnx can download in this google share:https://drive.google.com/file/d/1nPKDHrotusQ748O1cQXJfi5wdShq6bKp/view?usp=drive_link
 2. Step 4 cost much system memory, you can config more virtual memory in windows system to cover it
 <img width="1347" height="1137" alt="image" src="https://github.com/user-attachments/assets/a4ca09b1-1109-4658-9cc0-e45ea4e4c8be" />
- 
+
+## To do next
+正在适配国产昇腾GPU卡，目前代码和onnx到om模型的转换已经完成，在昇腾推理卡310B4上运行有问题，正在与华为沟通排查问题
+
+Adapting to the domestic Ascend GPU cards, the code and ONNX-to-OM model conversion have been completed. However, there are issues running on the Ascend inference card 310B4. We are currently communicating with Huawei to troubleshoot the problem
+
+ATC转换命令按照910C和310C的为
+
+The ATC conversion commands follow the standards of 910C and 310C
+```C++
+atc --model=detr_resnet50.onnx \
+    --framework=5 \
+    --output=detr_resnet50 \
+    --input_format=NCHW \
+    --input_shape="images:1,3,640,640;orig_target_sizes:2" \
+    --soc_version=Ascend310 \
+    --insert_op_conf=aipp.cfg \
+    --log=info \
+    --optypelist_for_implmode="Abs" \
+    --op_select_implmode=high_precision \
+    --precision_mode=force_fp16 \
+    --disable_reuse_memory=1 \
+    --output_type=FP16
+```
+但是运行有问题，正在与华为团队沟通
+
+However, there is an operational issue, and we are currently communicating with the Huawei team
+
+![output](https://github.com/user-attachments/assets/59614f03-8d26-4a30-9a2a-7f222857f856)
 
 ## Thanks
 Our work is built upon DEIMv2 and DINOv3. Thanks for their great work!
