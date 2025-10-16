@@ -7,7 +7,7 @@ We completed it from originally python onnx to windows onnx.
 <img width="689" height="490" alt="image" src="https://github.com/user-attachments/assets/ef663580-682f-4fbc-b8fb-aae49a092c4e" />
 
 ## Roadmap
-Complete the adaptation on the Huawei-Ascend 310B and 910C platform(progress descripted at the final chapter 'to do next part')
+Complete the adaptation on the Huawei-Ascend 310B and 910C platform(progress described at the final chapter 'to do next part')
 
 
 ## Steps
