@@ -76,19 +76,19 @@ ATC转换命令按照910C和310C的为
 
 The ATC conversion commands follow the standards of 910C and 310C
 ```C++
-atc --model=detr_resnet50.onnx \
-    --framework=5 \
-    --output=detr_resnet50 \
-    --input_format=NCHW \
-    --input_shape="images:1,3,640,640;orig_target_sizes:2" \
-    --soc_version=Ascend310 \
-    --insert_op_conf=aipp.cfg \
-    --log=info \
-    --optypelist_for_implmode="Abs" \
-    --op_select_implmode=high_precision \
-    --precision_mode=force_fp16 \
-    --disable_reuse_memory=1 \
-    --output_type=FP16
+atc --model=deimv2_dinov3_m_coco.onnx \
+--framework=5 \
+--output=ascend_model\
+--soc_version=Ascend310B4 \
+--input_shape="images:1,3,640,640;orig_target_sizes:1,2" \
+--input_format=NCHW \
+--insert_op_conf=aipp.cfg \
+--optypelist_for_implmode="Abs" \
+--op_select_implmode=high_precision \
+--precision_mode=force_fp16 \
+--disable_reuse_memory=1 \
+--output_type=FP16
+
 ```
 但是运行有问题，正在与华为团队沟通
 
