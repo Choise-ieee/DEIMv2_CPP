@@ -6,6 +6,12 @@ DEIMv2(https://github.com/Intellindust-AI-Lab/DEIMv2) is an evolution of the DEI
 We completed it from originally python onnx to windows onnx.
 <img width="689" height="490" alt="image" src="https://github.com/user-attachments/assets/ef663580-682f-4fbc-b8fb-aae49a092c4e" />
 
+
+## The latest version [2025.10.28] adaption
+The latest version [2025.10.28] Optimized the attention module in ViT-Tiny, reducing memory usage by half for the S and M models.
+The adaption can reference the guide:https://github.com/Choise-ieee/DEIMv2_CPP/issues/1
+
+
 ## Roadmap
 Complete the adaptation on the Huawei-Ascend 310B and 910C platform(progress described at the final chapter 'To do next' part)
 
